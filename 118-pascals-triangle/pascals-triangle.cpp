@@ -29,8 +29,27 @@ private:
 
         return ans;
     }
+
+    vector<vector<int>> pascalTriangle02(int numRows) {
+        vector<vector<int>> ans(numRows);
+        
+        for(int i=0; i<numRows; i++) {
+            ans[i] = vector<int>(i+1, 11);
+            for(int j=0; j<=i; j++) {
+                if(j==0 || j==i) {
+                    ans[i][j] = 1;
+                } else {
+                    ans[i][j] = ans[i-1][j-1] + ans[i-1][j];
+                }
+            }
+        }
+
+        return ans;
+    }
+
 public:
     vector<vector<int>> generate(int numRows) {
-        return pascalTriangle01(numRows);
+        // return pascalTriangle01(numRows); //Iterative
+        return pascalTriangle02(numRows); //DP
     }
 };

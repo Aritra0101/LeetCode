@@ -21,10 +21,6 @@ public:
                 containUpper = true;    
             else if( symbol.find(password[i]) != string::npos )
                 containSymbol = true; 
-
-
-            // if( containLower && containUpper && containDigit && containSymbol )
-            //     return true;
         }
 
         if( isdigit(password[0]) )
@@ -42,9 +38,11 @@ public:
         // cout<<"\nSymbol "<<containSymbol;
 
 
-        if( containLower && containUpper && containDigit && containSymbol )
-            return true;
-        else
-            return false;
+        // if( containLower && containUpper && containDigit && containSymbol )
+        //     return true;
+        // else
+        //     return false;
+
+        return (containLower && containUpper && containDigit && containSymbol);
     }
 };

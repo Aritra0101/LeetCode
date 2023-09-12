@@ -5,14 +5,14 @@ public:
         for(char ch: s)
             hashAlpha[ch-'a']++;
 
-        for(auto it: hashAlpha)
-            cout<<it<<" ";
-        cout<<endl;
+        // for(auto it: hashAlpha)
+        //     cout<<it<<" ";
+        // cout<<endl;
         sort(hashAlpha, hashAlpha+26);
-        cout<<endl;
-        for(auto it: hashAlpha)
-            cout<<it<<" ";
-        cout<<endl;
+        // cout<<endl;
+        // for(auto it: hashAlpha)
+        //     cout<<it<<" ";
+        // cout<<endl;
 
         int res=0, deleteCount;
         for(int i=26-1-1; i>=0; i--) {
